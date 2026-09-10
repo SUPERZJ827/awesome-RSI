@@ -471,7 +471,7 @@ The following additions are explicitly discussed in Table 3 of the survey, which
    ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L1. *Updated object(s):* 5.1 Model Weights; 8.1 Experience Data.
 
-1. **Forward-Free Diffusion Language Models**  
+1. **Forward-Free Diffusion Language Models with BPTT-Free Looped Refinement**  
    [[Paper](https://arxiv.org/abs/2606.08357)] · arXiv:2606.08357  
    ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L1. *Updated object(s):* 5.1 Model Weights; 6.1 Objective.
@@ -2304,7 +2304,7 @@ Table 5 identifies the following learner-conditioned future-experience loop, com
    ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L3. *Updated object(s):* 5.1 Model Weights; 6.1 Objective.
 
-1. **TTSR: Test-Time Self-Reflection for Continual Reasoning Improvement**  
+1. **TTSR: Test-Time Self-Evolving via Reflection**  
    [[Paper](https://arxiv.org/abs/2603.03297)] · arXiv:2603.03297  
    ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L3. *Updated object(s):* 5.1 Model Weights; 8.2 Task Generator; 2.1 Experience Memory.
@@ -2438,7 +2438,7 @@ The following additions are explicitly discussed in Table 6 under trajectory dis
    ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_&_Knowledge-059669)  
    *Taxonomy:* L4. *Updated object(s):* 2.1 Experience Memory; 5.4 Model.
 
-1. **AgenticDB: Agentic Performance Reconfiguration for Database Workloads**  
+1. **AgenticDB: Self-Evolving Reconfiguration Framework for Database Workloads**  
    [[Paper](https://arxiv.org/abs/2606.20318)] · arXiv:2606.20318  
    ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_&_Knowledge-059669)  
    *Taxonomy:* L4. *Updated object(s):* 2.1 Experience Memory; 8.3 Environment.
