@@ -2,8 +2,6 @@
 
 > A taxonomy-first, auditable reading list of **491 papers** on recursive self-improvement (RSI). Every entry retains its arXiv identifier, primary autonomy level, and updated-object classification.
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
 RSI here means a persistent change that affects an AI system's future performance across repeated improvement cycles. The updated object may be model weights, prompts, code, memory, skills, task distributions, or the improvement mechanism itself. Levels capture autonomy over what is changed, how it is changed, and where later learning experience comes from; they are not paper-quality rankings.
 
 ![RSI autonomy taxonomy overview](./rsi-overview.png)
@@ -25,7 +23,7 @@ RSI here means a persistent change that affects an AI system's future performanc
 
 ## Scope and Relevance Decision
 
-**All 491 papers in `rsi_chart_filtered_491.csv` are retained as RSI-related under the supplied L1-L5 taxonomy.** The taxonomy intentionally includes bounded forms and precursors:
+**All 491 papers in this collection are retained as RSI-related under the L1-L5 taxonomy.** The taxonomy intentionally includes bounded forms and precursors:
 
 - **L1:** a system persistently updates an object, but people prescribe the update workflow, objective, and acceptance rule.
 - **L2:** a system searches or revises a concrete intervention, while people still define the task and evaluation rule.
@@ -2566,7 +2564,7 @@ To add or revise an entry, keep its evidence auditable. Provide a stable identif
 
 ## Data Provenance and Validation
 
-This document was generated from `rsi_chart_filtered_491.csv` on 2026-09-11. The source records a title, arXiv ID, primary level, boundary classification, detailed rationale, and updated-object code(s) for every paper. It does not provide authors or venue metadata; those fields are intentionally not inferred.
+This document was curated from a per-paper taxonomy dataset on 2026-09-11. The dataset records a title, arXiv ID, primary level, boundary classification, detailed rationale, and updated-object code(s) for every paper. It does not provide authors or venue metadata; those fields are intentionally not inferred.
 
 Automated integrity checks before generation:
 
@@ -2575,5 +2573,4 @@ Automated integrity checks before generation:
 - All IDs match the arXiv identifier pattern `YYMM.NNNNN` (or its four-digit predecessor form).
 - Source labels are preserved rather than inferred from keyword matching. Keyword-only screening would incorrectly omit lower-level but in-scope work such as automatic prompt search.
 
-The source CSV is the authoritative per-paper classification record. The separate `rsi_chart_aggregation.csv` is an aggregate visualization table and must not be used to reconstruct individual metadata.
-
+The underlying per-paper taxonomy dataset is the authoritative classification record. Aggregate visualizations should not be used to reconstruct individual paper metadata.
