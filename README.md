@@ -1,8 +1,8 @@
 # Awesome Recursive Self-Improvement (RSI)
 
-> A taxonomy-first, auditable reading list of **491 papers** on recursive self-improvement (RSI). Every entry retains its arXiv identifier, primary autonomy level, and updated-object classification.
+> A taxonomy-first, auditable reading list of **519 papers** on recursive self-improvement (RSI). Every entry retains its arXiv identifier, primary autonomy level, and updated-object classification.
 
-RSI here means a persistent change that affects an AI system's future performance across repeated improvement cycles. The updated object may be model weights, prompts, code, memory, skills, task distributions, or the improvement mechanism itself. Levels capture autonomy over what is changed, how it is changed, and where later learning experience comes from; they are not paper-quality rankings.
+RSI is the capability of an intelligent system to transform acquired experience and feedback into persistent changes to itself across interaction rounds, such that those changes can affect how later improvements are generated, evaluated, selected, and consolidated. The updated object may be model weights, prompts, code, memory, skills, task distributions, or the improvement mechanism itself. Levels capture autonomy over what is changed, how it is changed, and where later learning experience comes from; they are not paper-quality rankings.
 
 ![RSI autonomy taxonomy overview](./rsi-overview.png)
 
@@ -11,27 +11,43 @@ RSI here means a persistent change that affects an AI system's future performanc
 ## Table of Contents
 
 - [Scope and Relevance Decision](#scope-and-relevance-decision)
+- [RSI Improvement-Loop Anatomy](#rsi-improvement-loop-anatomy)
 - [How to Read the Tags](#how-to-read-the-tags)
 - [Taxonomy at a Glance](#taxonomy-at-a-glance)
-- [1. L1 - Executing a Prescribed Improvement Loop](#1-l1---executing-a-prescribed-improvement-loop)
-- [2. L2 - Searching or Revising an Intervention Object](#2-l2---searching-or-revising-an-intervention-object)
-- [3. L3 - Autonomous Experience Acquisition and Curricula](#3-l3---autonomous-experience-acquisition-and-curricula)
-- [4. L4 - Persistent Memory, Skills, and Environment-Grounded Learning](#4-l4---persistent-memory-skills-and-environment-grounded-learning)
-- [5. L5 - Full-System Co-evolution and Meta-RSI](#5-l5---full-system-co-evolution-and-meta-rsi)
+- [1. L1 - Autonomy over Improvement Execution](#1-l1---autonomy-over-improvement-execution)
+- [2. L2 - Autonomy over Improvement Strategies](#2-l2---autonomy-over-improvement-strategies)
+- [3. L3 - Autonomy over Future Learning Experience](#3-l3---autonomy-over-future-learning-experience)
+- [4. L4 - Autonomy in Deployment and Environmental Adaptation](#4-l4---autonomy-in-deployment-and-environmental-adaptation)
+- [5. L5 - From Environmental Adaptation to Meta-Improvement](#5-l5---from-environmental-adaptation-to-meta-improvement)
 - [Contributing](#contributing)
 - [Data Provenance and Validation](#data-provenance-and-validation)
 
 ## Scope and Relevance Decision
 
-**All 491 papers in this collection are retained as RSI-related under the L1-L5 taxonomy.** The taxonomy intentionally includes bounded forms and precursors:
+**The 491 baseline papers and 28 table-derived extensions in this collection are retained as RSI-related under the L1-L5 taxonomy.** The taxonomy intentionally includes bounded forms and precursors:
 
-- **L1:** a system persistently updates an object, but people prescribe the update workflow, objective, and acceptance rule.
-- **L2:** a system searches or revises a concrete intervention, while people still define the task and evaluation rule.
-- **L3:** the learner's state influences the experience, task, or curriculum acquired next.
-- **L4:** reusable memory/skills or richer environment interaction persistently alter later behavior.
-- **L5:** several components, or the mechanism choosing future improvements itself, co-evolve.
+- **L1 - Autonomy over Improvement Execution:** the system executes a human-defined improvement procedure, and its accepted results persist into later tasks or rounds.
+- **L2 - Autonomy over Improvement Strategies:** the system chooses how to improve a specified target, while the objective, evaluation criterion, or acceptance rule remains external.
+- **L3 - Autonomy over Future Learning Experience:** the learner's evolving state influences the experience, task, or curriculum acquired next.
+- **L4 - Autonomy in Deployment and Environmental Adaptation:** reusable memory, skills, or deployed agent components are retained and alter later behavior within a fixed improvement process.
+- **L5 - From Environmental Adaptation to Meta-Improvement:** the system improves the mechanism that produces future improvements, such as search, evaluation, or research-control policies.
 
 Thus, inclusion does not claim that every entry is a fully autonomous or open-ended RSI system. The L1 and L2 labels make their bounded autonomy explicit.
+
+## RSI Improvement-Loop Anatomy
+
+Each entry can be interpreted through the same loop: **experience -> candidate modification -> verifier / acceptance rule -> retained improvement -> successor re-entry**. The relevant components are:
+
+| Component | Role in the loop |
+| --- | --- |
+| **System state** | Persistent state inherited by the next round. |
+| **Experience** | Prior interaction outcomes, failures, feedback, or observations that inform an update. |
+| **Target** | The object directly modified in the current round. |
+| **Improver and strategy** | The mechanism that proposes candidates and decides where or how to search. |
+| **Verifier** | The evaluator that applies an acceptance rule, such as tests, rewards, formal checks, or human feedback. |
+| **Improvement and successor** | An accepted, retained state change and the next system version that inherits it. |
+
+This anatomy supplies three tests for every claimed RSI loop: **Where does the loop close? What is updated and inherited? Which decisions remain external?**
 
 ## How to Read the Tags
 
@@ -49,11 +65,11 @@ Blue, purple, orange, green, and red encode L1 through L5. Target colors disting
 
 | Level | Papers | Interpretation |
 | --- | ---: | --- |
-| L1 | 215 | Runs a prescribed update procedure and retains the resulting change. |
-| L2 | 155 | Searches or revises a specific intervention artifact under an externally specified task and acceptance rule. |
-| L3 | 64 | Uses the learner's evolving state to influence subsequent tasks, trajectories, environments, or curricula. |
-| L4 | 28 | Accumulates reusable external state or uses continuing environment interaction to alter later behavior. |
-| L5 | 29 | Co-evolves multiple system components or improves the mechanism that selects future improvements. |
+| L1 | 219 | Autonomy over improvement execution. |
+| L2 | 159 | Autonomy over improvement strategies. |
+| L3 | 65 | Autonomy over future learning experience. |
+| L4 | 45 | Autonomy in deployment and environmental adaptation. |
+| L5 | 31 | From environmental adaptation to meta-improvement. |
 
 ### Updated-Object Families
 
@@ -71,9 +87,33 @@ Blue, purple, orange, green, and red encode L1 through L5. Target colors disting
 | 10 | Full-system / Co-evolution |
 
 
-## 1. L1 - Executing a Prescribed Improvement Loop
+## 1. L1 - Autonomy over Improvement Execution
 
-Runs a prescribed update procedure and retains the resulting change. **215 papers.**
+The system executes a human-defined improvement procedure and retains accepted results for later tasks or rounds. **219 papers.**
+
+### Table-derived extensions
+
+The following additions are explicitly discussed in Table 3 of the survey, which organizes representative L1 systems by AI development pipeline level.
+
+1. **Phi-4-reasoning Technical Report**  
+   [[Paper](https://arxiv.org/abs/2504.21318)] · arXiv:2504.21318  
+   ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Data_Environment-ca8a04)  
+   *Survey-table rationale:* Training-data selection through LLM evaluation and boundary filtering; selection criteria remain human-defined. *Updated object(s):* 8.1 Training / Experience Data.
+
+1. **NVIDIA Nemotron-4 340B Technical Report**  
+   [[Paper](https://arxiv.org/abs/2406.11704)] · arXiv:2406.11704  
+   ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Data_Environment-ca8a04)  
+   *Survey-table rationale:* Synthetic supervision is generated and reward-filtered under human-defined quality dimensions. *Updated object(s):* 8.1 Training / Experience Data.
+
+1. **EDIT: Evidence-Diagnosed Intervention Training for Rule-Faithful LLM Grading**  
+   [[Paper](https://arxiv.org/abs/2606.06350)] · arXiv:2606.06350  
+   ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Trainer_Optimization-c2410c)  
+   *Survey-table rationale:* Diagnosed-step revisions refine a training signal while diagnostic criteria remain human-defined. *Updated object(s):* 6.1 Training Objective.
+
+1. **AIPC: Agent-Based Automation for AI Model Deployment with Qualcomm AI Runtime**  
+   [[Paper](https://arxiv.org/abs/2604.14661)] · arXiv:2604.14661  
+   ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness_Workflow-0f766e)  
+   *Survey-table rationale:* Skill-guided deployment adaptation follows a human-defined deployment procedure. *Updated object(s):* 3.6 Harness Implementation / Scaffold Code.
 
 
 1. **$V_1$: Unifying Generation and Self-Verification for Parallel Reasoners**  
@@ -1151,20 +1191,59 @@ Runs a prescribed update procedure and retains the resulting change. **215 paper
    ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Prompt_&_Context-7c3aed)  
    *Taxonomy:* L1. *Updated object(s):* 1.3 Prompt & Context; 3.4 Harness / Workflow.
 
-## 2. L2 - Searching or Revising an Intervention Object
+## 2. L2 - Autonomy over Improvement Strategies
 
-Searches or revises a specific intervention artifact under an externally specified task and acceptance rule. **155 papers.**
+The system chooses how to improve a specified target, while the objective, evaluation criterion, or acceptance rule remains externally specified. **159 papers.**
+
+### Table-derived extensions
+
+The following additions are explicitly listed in Table 4, which groups representative L2 systems by the object of improvement-strategy search.
+
+1. **Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs**  
+   [[Paper](https://arxiv.org/abs/2510.09201)] · arXiv:2510.09201  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Prompt_Context-7c3aed)  
+   *Survey-table rationale:* Evaluation-derived semantic feedback guides multimodal prompt candidates under a fixed task metric. *Updated object(s):* 1.1 Instruction; 1.2 Task Prompt / Template.
+
+1. **Agentic Neural Architecture Search**  
+   [[Paper](https://arxiv.org/abs/2607.07984)] · arXiv:2607.07984  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
+   *Survey-table rationale:* An LLM constructs a task-specific architecture search space, but the validation metric remains fixed. *Updated object(s):* 5.3 Architecture.
+
+1. **Auto Research with Specialist Agents Develops Effective and Non-Trivial Training Recipes**  
+   [[Paper](https://arxiv.org/abs/2605.05724)] · arXiv:2605.05724  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Trainer_Optimization-c2410c)  
+   *Survey-table rationale:* Specialist agents search over training recipes with a shared lineage under an external evaluator. *Updated object(s):* 6.5 Search / Meta-optimization Procedure.
+
+1. **AutoKernel: Autonomous GPU Kernel Optimization via Iterative Agent-Driven Search**  
+   [[Paper](https://arxiv.org/abs/2603.21331)] · arXiv:2603.21331  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
+   *Survey-table rationale:* A profile-rewrite-benchmark loop searches kernel implementations under fixed correctness and speed criteria. *Updated object(s):* 9.1 Program / Solution Code.
+
+1. **Adapting AlphaEvolve to Optimize Fully Homomorphic Encryption on TPUs**  
+   [[Paper](https://arxiv.org/abs/2605.14718)] · arXiv:2605.14718  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
+   *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
+
+1. **AI-PROPELLER: Warehouse-Scale Interprocedural Code Layout Optimization with AlphaEvolve**  
+   [[Paper](https://arxiv.org/abs/2606.00131)] · arXiv:2606.00131  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
+   *Taxonomy:* L2. *Updated object(s):* 9.2 Algorithm.
+
+1. **Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve**  
+   [[Paper](https://arxiv.org/abs/2601.21096)] · arXiv:2601.21096  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
+   *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
+
+1. **Scientific Algorithm Discovery by Augmenting AlphaEvolve with Deep Research**  
+   [[Paper](https://arxiv.org/abs/2510.06056)] · arXiv:2510.06056  
+   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
+   *Taxonomy:* L2. *Updated object(s):* 9.2 Algorithm; 2.1 Experience Memory.
 
 
 1. **A Self-Improving Coding Agent**  
    [[Paper](https://arxiv.org/abs/2504.15228)] · arXiv:2504.15228  
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness___Workflow-0f766e)  
    *Taxonomy:* L2. *Updated object(s):* 3.6 Scaffold Code; 4.3 Tool Code; 1.1 Instruction.
-
-1. **Adapting AlphaEvolve to Optimize Fully Homomorphic Encryption on TPUs**  
-   [[Paper](https://arxiv.org/abs/2605.14718)] · arXiv:2605.14718  
-   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
-   *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
 
 1. **Adaptive Self-improvement LLM Agentic System for ML Library Development**  
    [[Paper](https://arxiv.org/abs/2502.02534)] · arXiv:2502.02534  
@@ -1210,11 +1289,6 @@ Searches or revises a specific intervention artifact under an externally specifi
    [[Paper](https://arxiv.org/abs/2606.03963)] · arXiv:2606.03963  
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Trainer___Optimization-c2410c)  
    *Taxonomy:* L2. *Updated object(s):* 6.1 Objective; 5.1 Model Weights.
-
-1. **AI-PROPELLER: Warehouse-Scale Interprocedural Code Layout Optimization with AlphaEvolve**  
-   [[Paper](https://arxiv.org/abs/2606.00131)] · arXiv:2606.00131  
-   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
-   *Taxonomy:* L2. *Updated object(s):* 9.2 Algorithm.
 
 1. **Ask, Don't Judge: Binary Questions for Interpretable LLM Evaluation and Self-Improvement**  
    [[Paper](https://arxiv.org/abs/2606.27226)] · arXiv:2606.27226  
@@ -1651,11 +1725,6 @@ Searches or revises a specific intervention artifact under an externally specifi
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
    *Taxonomy:* L2. *Updated object(s):* 9.2 Algorithm; 9.1 Program Code.
 
-1. **Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve**  
-   [[Paper](https://arxiv.org/abs/2601.21096)] · arXiv:2601.21096  
-   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
-   *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
-
 1. **Mathematical exploration and discovery at scale**  
    [[Paper](https://arxiv.org/abs/2511.02864)] · arXiv:2511.02864  
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
@@ -1811,11 +1880,6 @@ Searches or revises a specific intervention artifact under an externally specifi
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_&_Skills-2563eb)  
    *Taxonomy:* L2. *Updated object(s):* 4.4 Skill Library.
 
-1. **Scientific Algorithm Discovery by Augmenting AlphaEvolve with Deep Research**  
-   [[Paper](https://arxiv.org/abs/2510.06056)] · arXiv:2510.06056  
-   ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
-   *Taxonomy:* L2. *Updated object(s):* 9.2 Algorithm; 2.1 Experience Memory.
-
 1. **Self-Consolidating Language Models: Continual Knowledge Incorporation from Context**  
    [[Paper](https://arxiv.org/abs/2605.07076)] · arXiv:2605.07076  
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
@@ -1931,9 +1995,18 @@ Searches or revises a specific intervention artifact under an externally specifi
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
    *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
 
-## 3. L3 - Autonomous Experience Acquisition and Curricula
+## 3. L3 - Autonomy over Future Learning Experience
 
-Uses the learner's evolving state to influence subsequent tasks, trajectories, environments, or curricula. **64 papers.**
+The learner's evolving state influences the experience, task, or curriculum acquired next. **65 papers.**
+
+### Table-derived extension
+
+Table 5 identifies the following learner-conditioned future-experience loop, complementary to the self-play and autonomous-practice systems already in this section.
+
+1. **SIMA 2: A Generalist Embodied Agent for Virtual Worlds**  
+   [[Paper](https://arxiv.org/abs/2512.04797)] · arXiv:2512.04797  
+   ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Data_Environment-ca8a04)  
+   *Survey-table rationale:* In the full ASKA setting, evaluation feedback directs practice toward weaker skills; later experience is conditioned on the learner's changing capability state. *Updated object(s):* 8.1 Training / Experience Data; 8.2 Task / Curriculum Generator; 8.3 Environment / Simulator.
 
 
 1. **Absolute Zero: Reinforced Self-play Reasoning with Zero Data**  
@@ -2256,9 +2329,98 @@ Uses the learner's evolving state to influence subsequent tasks, trajectories, e
    ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L3. *Updated object(s):* 5.1 Model Weights; 8.2 Task Generator.
 
-## 4. L4 - Persistent Memory, Skills, and Environment-Grounded Learning
+## 4. L4 - Autonomy in Deployment and Environmental Adaptation
 
-Accumulates reusable external state or uses continuing environment interaction to alter later behavior. **28 papers.**
+Reusable memory, skills, or deployed agent components persistently alter later behavior within a fixed improvement process. **45 papers.**
+
+### Table-derived extensions
+
+The following additions are explicitly discussed in Table 6 under trajectory distillation, iterative agent-system revision, or selective retention and deployment of updates.
+
+1. **DecoEvo: Score-Decoupled Co-Evolution of Solver and Rubric-Generator Skills in Text Space**  
+   [[Paper](https://arxiv.org/abs/2607.25675)] · arXiv:2607.25675  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Evaluator_Feedback-a21caf)  
+   *Survey-table rationale:* Solver and rubric skills co-evolve across iterative rounds with score-independent audits. *Updated object(s):* 7.1 Evaluator / Judge; 4.4 Skill / Macro Library.
+
+1. **Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills**  
+   [[Paper](https://arxiv.org/abs/2603.25158)] · arXiv:2603.25158  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_Skills-2563eb)  
+   *Survey-table rationale:* Error and success analysts merge patches into portable skill documents for later reuse. *Updated object(s):* 4.4 Skill / Macro Library.
+
+1. **Metis: Bridging Text and Code Memory for Self-Evolving Agents**  
+   [[Paper](https://arxiv.org/abs/2606.24151)] · arXiv:2606.24151  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_Knowledge-059669)  
+   *Survey-table rationale:* Text plans and code tools are retained after completed tasks and validated through reuse and sandbox compilation. *Updated object(s):* 2.3 Procedural Memory; 4.3 Tool Implementation.
+
+1. **Library Drift: Diagnosing and Fixing a Silent Failure Mode in Self-Evolving LLM Skill Libraries**  
+   [[Paper](https://arxiv.org/abs/2605.19576)] · arXiv:2605.19576  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_Skills-2563eb)  
+   *Survey-table rationale:* Periodic retention retires low-contribution skills and caps the evolving library. *Updated object(s):* 4.4 Skill / Macro Library.
+
+1. **APEX: Autonomous Policy Exploration for Self-Evolving LLM Agents**  
+   [[Paper](https://arxiv.org/abs/2605.21240)] · arXiv:2605.21240  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_Knowledge-059669)  
+   *Survey-table rationale:* A milestone dependency graph retains episode outcomes and informs later exploration. *Updated object(s):* 2.2 Semantic / Knowledge Memory.
+
+1. **Learning Personalized Agents from Human Feedback**  
+   [[Paper](https://arxiv.org/abs/2602.16173)] · arXiv:2602.16173  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_Knowledge-059669)  
+   *Survey-table rationale:* User clarification confirms and revises persistent preference entries. *Updated object(s):* 2.2 Semantic / Knowledge Memory.
+
+1. **MemToolAgent: Leveraging Memory for Tool-Using Agents Based on Environment and User Feedback**  
+   [[Paper](https://arxiv.org/abs/2606.07909)] · arXiv:2606.07909  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_Knowledge-059669)  
+   *Survey-table rationale:* Tool-use critiques and retrieval policy are updated from environment and user feedback. *Updated object(s):* 2.3 Procedural Memory; 2.5 Memory Operations.
+
+1. **PRACTICE: From Experience to Expertise in Self-Evolving Embodied Agents**  
+   [[Paper](https://arxiv.org/abs/2608.30760)] · arXiv:2608.30760  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_Skills-2563eb)  
+   *Survey-table rationale:* Success/failure contrasts and teacher distillation validate additions to an embodied skill library. *Updated object(s):* 4.4 Skill / Macro Library.
+
+1. **PILOT in the Loop: Live Self-Improvement for Long-Horizon Agents**  
+   [[Paper](https://arxiv.org/abs/2608.26530)] · arXiv:2608.26530  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_Knowledge-059669)  
+   *Survey-table rationale:* Live-run feedback is distilled into persistent procedures and failure modes. *Updated object(s):* 2.3 Procedural Memory.
+
+1. **Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents**  
+   [[Paper](https://arxiv.org/abs/2608.15071)] · arXiv:2608.15071  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness_Workflow-0f766e)  
+   *Survey-table rationale:* Failed or negatively evaluated tasks trigger reflection and edits to retained harness skill tuples. *Updated object(s):* 3.6 Harness Implementation / Scaffold Code; 4.4 Skill / Macro Library.
+
+1. **Self-Evolving Embodied Agents via Skill-Harness Evolution**  
+   [[Paper](https://arxiv.org/abs/2608.11350)] · arXiv:2608.11350  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness_Workflow-0f766e)  
+   *Survey-table rationale:* Planning guidance and context-selection code are retained and tested through sandbox execution and downstream tasks. *Updated object(s):* 3.1 Workflow / Graph; 1.5 Context Composition.
+
+1. **Evo-Memory: Benchmarking LLM Agent Test-Time Learning with Self-Evolving Memory**  
+   [[Paper](https://arxiv.org/abs/2511.20857)] · arXiv:2511.20857  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Memory_Knowledge-059669)  
+   *Survey-table rationale:* Accumulated agent memory is evaluated over sequential task streams for long-horizon reuse. *Updated object(s):* 2.1 Episodic / Experience Memory.
+
+1. **S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?**  
+   [[Paper](https://arxiv.org/abs/2608.31100)] · arXiv:2608.31100  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness_Workflow-0f766e)  
+   *Survey-table rationale:* The work compares retained history, summaries, and parameter-update pathways across iterative rounds. *Updated object(s):* 3.4 Verification / Reflection Loop; 2.1 Episodic / Experience Memory.
+
+1. **Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents**  
+   [[Paper](https://arxiv.org/abs/2605.30621)] · arXiv:2605.30621  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness_Workflow-0f766e)  
+   *Survey-table rationale:* It separates the quality of retained harness updates from their execution benefit in fixed solve-evolve rounds. *Updated object(s):* 3.6 Harness Implementation / Scaffold Code.
+
+1. **Rethinking Self-Evolving Agent Skills: Feedback Dynamics over Multiple Rounds**  
+   [[Paper](https://arxiv.org/abs/2608.02636)] · arXiv:2608.02636  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_Skills-2563eb)  
+   *Survey-table rationale:* Skill edits are filtered using task outcomes across multiple rounds. *Updated object(s):* 4.4 Skill / Macro Library.
+
+1. **ASPIRE: Can Models Self-Evolve from Vague Goals?**  
+   [[Paper](https://arxiv.org/abs/2608.31111)] · arXiv:2608.31111  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Harness_Workflow-0f766e)  
+   *Survey-table rationale:* Verified score improvements determine whether model-weight or harness revisions are retained. *Updated object(s):* 5.1 Model Weights; 3.6 Harness Implementation / Scaffold Code.
+
+1. **Hypothesis-Driven Skill Optimization for LLM Agents**  
+   [[Paper](https://arxiv.org/abs/2606.22330)] · arXiv:2606.22330  
+   ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_Skills-2563eb)  
+   *Survey-table rationale:* Candidate skill packages are retained after paired control-and-treatment executions. *Updated object(s):* 4.4 Skill / Macro Library.
 
 
 1. **A Self-Evolving AI Agent System for Climate Science**  
@@ -2401,9 +2563,23 @@ Accumulates reusable external state or uses continuing environment interaction t
    ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_&_Skills-2563eb)  
    *Taxonomy:* L4. *Updated object(s):* 4.4 Skill Library; 2.2 Knowledge Memory.
 
-## 5. L5 - Full-System Co-evolution and Meta-RSI
+## 5. L5 - From Environmental Adaptation to Meta-Improvement
 
-Co-evolves multiple system components or improves the mechanism that selects future improvements. **29 papers.**
+The system improves the mechanism that produces future improvements, including search, evaluation, and research-control policies. **31 papers.**
+
+### Table-derived extensions
+
+The following additions are explicitly listed in Table 7 as L5 mechanisms with identified external controls.
+
+1. **Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation**  
+   [[Paper](https://arxiv.org/abs/2310.02304)] · arXiv:2310.02304  
+   ![](https://img.shields.io/badge/-Level--L5-be123c) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Full_system_Co-evolution-be123c)  
+   *Survey-table rationale:* The current improver receives its own source as an optimization target; selected improver code governs the next program-search round. *Updated object(s):* 10.3 Improvement-loop / Meta-RSI; 9.1 Program / Solution Code.
+
+1. **AIRA2: Overcoming Bottlenecks in AI Research Agents**  
+   [[Paper](https://arxiv.org/abs/2603.26499)] · arXiv:2603.26499  
+   ![](https://img.shields.io/badge/-Level--L5-be123c) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Full_system_Co-evolution-be123c)  
+   *Survey-table rationale:* Research artifacts and a search policy are retained to guide later task experiments under an external research harness and evaluation. *Updated object(s):* 10.3 Improvement-loop / Meta-RSI; 6.5 Search / Meta-optimization Procedure.
 
 
 1. **A-Evolve-Training: Autonomous Post-Training of a 30B Model**  
@@ -2564,13 +2740,13 @@ To add or revise an entry, keep its evidence auditable. Provide a stable identif
 
 ## Data Provenance and Validation
 
-This document was curated from a per-paper taxonomy dataset on 2026-09-11. The dataset records a title, arXiv ID, primary level, boundary classification, detailed rationale, and updated-object code(s) for every paper. It does not provide authors or venue metadata; those fields are intentionally not inferred.
+This document combines a 491-paper per-paper taxonomy dataset with 28 additional works selected from the survey's representative Tables 3-7 on 2026-09-11. The baseline dataset records a title, arXiv ID, primary level, boundary classification, detailed rationale, and updated-object code(s) for every paper. The extensions retain the table-derived rationale and are placed using the same target taxonomy. Neither source uniformly provides authors or venue metadata, so those fields are intentionally not inferred.
 
 Automated integrity checks before generation:
 
-- **491 / 491** rows have a title, arXiv ID, and valid primary level `L1` to `L5`.
+- **491 / 491** baseline rows have a title, arXiv ID, and valid primary level `L1` to `L5`; each of the **28** extensions has a stable arXiv identifier.
 - **0** duplicate arXiv IDs and **0** duplicate titles were found.
 - All IDs match the arXiv identifier pattern `YYMM.NNNNN` (or its four-digit predecessor form).
 - Source labels are preserved rather than inferred from keyword matching. Keyword-only screening would incorrectly omit lower-level but in-scope work such as automatic prompt search.
 
-The underlying per-paper taxonomy dataset is the authoritative classification record. Aggregate visualizations should not be used to reconstruct individual paper metadata.
+The per-paper taxonomy dataset remains the authoritative record for the source set. The 28 extensions were selected from the survey's chapter tables rather than from a bulk bibliography scan. Aggregate visualizations should not be used to reconstruct individual paper metadata.
