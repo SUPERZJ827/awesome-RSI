@@ -1,5 +1,7 @@
 # Awesome Recursive Self-Improvement (RSI)
 
+> This repository accompanies [**The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement**](https://arxiv.org/abs/2609.11873) (Yi Duan et al., 2026; [arXiv:2609.11873](https://arxiv.org/abs/2609.11873)).
+
 > A taxonomy-first, auditable reading list of **519 papers** on recursive self-improvement (RSI). Every entry retains its arXiv identifier, primary autonomy level, and updated-object classification.
 
 RSI is the capability of an intelligent system to transform acquired experience and feedback into persistent changes to itself across interaction rounds, such that those changes can affect how later improvements are generated, evaluated, selected, and consolidated. The updated object may be model weights, prompts, code, memory, skills, task distributions, or the improvement mechanism itself. Levels capture autonomy over what is changed, how it is changed, and where later learning experience comes from; they are not paper-quality rankings.
@@ -10,6 +12,7 @@ RSI is the capability of an intelligent system to transform acquired experience 
 
 ## Table of Contents
 
+- [Companion Survey](#companion-survey)
 - [Scope and Relevance Decision](#scope-and-relevance-decision)
 - [RSI Improvement-Loop Anatomy](#rsi-improvement-loop-anatomy)
 - [How to Read the Tags](#how-to-read-the-tags)
@@ -20,7 +23,16 @@ RSI is the capability of an intelligent system to transform acquired experience 
 - [4. L4 - Autonomy in Deployment and Environmental Adaptation](#4-l4---autonomy-in-deployment-and-environmental-adaptation)
 - [5. L5 - From Environmental Adaptation to Meta-Improvement](#5-l5---from-environmental-adaptation-to-meta-improvement)
 - [Contributing](#contributing)
+- [Citation](#citation)
 - [Data Provenance and Validation](#data-provenance-and-validation)
+
+## Companion Survey
+
+This collection accompanies [**The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement**](https://arxiv.org/abs/2609.11873), by Yi Duan, Ying Liu, Zirui Tang, Haodong Chen, Jun Zhou, Yumou Liu, Bangrui Xu, Yukai Wu, Sidi Chen, Yuhan Zhou, Haoyu Wang, Xiaoyou Yu, Shaokun Han, Xuzhou Zhu, Le Zhou, Bolin Lu, Wei Zhou, Jiachen Liu, Nuozhou Fang, Jiaxin Tian, Ruoyu Chen, Yuxuan Li, Kai Zuo, Kaiyan Zhang, Jiantao Qiu, Conghui He, Guoliang Li, Bowen Zhou, Zhiyuan Liu, Zhoufutu Wen, Jihua Kang, Xuanhe Zhou, and Fan Wu.
+
+The survey introduces the Headroom-Closed Index (HCI), develops the RSI roadmap represented by the L1-L5 taxonomy, and examines RSI in scientific discovery, embodied intelligence, and software engineering. This repository provides the paper-level, auditable companion to that roadmap.
+
+[Read on arXiv](https://arxiv.org/abs/2609.11873) · [PDF](https://arxiv.org/pdf/2609.11873) · [DOI](https://doi.org/10.48550/arXiv.2609.11873)
 
 ## Scope and Relevance Decision
 
@@ -2735,7 +2747,23 @@ To add or revise an entry, keep its evidence auditable. Provide a stable identif
 1. **Paper Title**  
    [[Paper](https://arxiv.org/abs/YYMM.NNNNN)] · arXiv:YYMM.NNNNN  
    ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Data_Environment-ca8a04)  
-   *Taxonomy:* L3. *Updated object(s):* 8.1 Experience Data.
+    *Taxonomy:* L3. *Updated object(s):* 8.1 Experience Data.
+```
+
+## Citation
+
+If you find this repository or its taxonomy useful, please cite the companion survey:
+
+```bibtex
+@misc{duan2026aibuilthumansgenuine,
+  title={The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement},
+  author={Yi Duan and Ying Liu and Zirui Tang and Haodong Chen and Jun Zhou and Yumou Liu and Bangrui Xu and Yukai Wu and Sidi Chen and Yuhan Zhou and Haoyu Wang and Xiaoyou Yu and Shaokun Han and Xuzhou Zhu and Le Zhou and Bolin Lu and Wei Zhou and Jiachen Liu and Nuozhou Fang and Jiaxin Tian and Ruoyu Chen and Yuxuan Li and Kai Zuo and Kaiyan Zhang and Jiantao Qiu and Conghui He and Guoliang Li and Bowen Zhou and Zhiyuan Liu and Zhoufutu Wen and Jihua Kang and Xuanhe Zhou and Fan Wu},
+  year={2026},
+  eprint={2609.11873},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2609.11873}
+}
 ```
 
 ## Data Provenance and Validation
