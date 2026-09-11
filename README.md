@@ -32,7 +32,7 @@ This collection accompanies [**The Last AI Built by Humans: Toward Genuine Recur
 
 The survey introduces the Headroom-Closed Index (HCI), develops the RSI roadmap represented by the L1-L5 taxonomy, and examines RSI in scientific discovery, embodied intelligence, and software engineering. This repository provides the paper-level, auditable companion to that roadmap.
 
-[Read on arXiv](https://arxiv.org/abs/2609.11873) · [PDF](https://arxiv.org/pdf/2609.11873) · [DOI](https://doi.org/10.48550/arXiv.2609.11873)
+[Read on arXiv](https://arxiv.org/abs/2609.11873) · [PDF](https://arxiv.org/pdf/2609.11873)
 
 ## Scope and Relevance Decision
 
