@@ -1,17 +1,65 @@
-# Awesome Recursive Self-Improvement (RSI)
+<a id="readme-top"></a>
+
+<div align="center">
+
+<h1>Awesome Recursive Self-Improvement (RSI)</h1>
+
+<strong>A taxonomy-first, auditable map of recursive self-improvement research.</strong>
+
+<p>
+  <a href="#paper-catalog"><img alt="Papers" src="https://img.shields.io/badge/papers-519-2563eb?style=flat-square"></a>
+  <a href="https://arxiv.org/abs/2609.11873"><img alt="Companion survey" src="https://img.shields.io/badge/Companion%20Survey-arXiv%3A2609.11873-b31b1b?style=flat-square&amp;logo=arxiv&amp;logoColor=white"></a>
+  <a href="#taxonomy-at-a-glance"><img alt="Taxonomy" src="https://img.shields.io/badge/taxonomy-L1--L5-7c3aed?style=flat-square"></a>
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2609.11873">📄 Survey</a> &nbsp;•&nbsp;
+  <a href="#citation">📝 Cite</a> &nbsp;•&nbsp;
+  <a href="#taxonomy-at-a-glance">🧭 Taxonomy</a> &nbsp;•&nbsp;
+  <a href="#paper-catalog">📚 Catalog</a> &nbsp;•&nbsp;
+  <a href="#latest-updates">🆕 Updates</a> &nbsp;•&nbsp;
+  <a href="#contributing">🤝 Contribute</a>
+</p>
+
+</div>
 
 > This repository accompanies [**The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement**](https://arxiv.org/abs/2609.11873) (Yi Duan et al., 2026; [arXiv:2609.11873](https://arxiv.org/abs/2609.11873)).
 
-> A taxonomy-first, auditable reading list of **519 papers** on recursive self-improvement (RSI). Every entry retains its arXiv identifier, primary autonomy level, and updated-object classification.
+> Every listed paper retains its arXiv identifier, primary autonomy level, and updated-object classification.
 
 RSI is the capability of an intelligent system to transform acquired experience and feedback into persistent changes to itself across interaction rounds, such that those changes can affect how later improvements are generated, evaluated, selected, and consolidated. The updated object may be model weights, prompts, code, memory, skills, task distributions, or the improvement mechanism itself. Levels capture autonomy over what is changed, how it is changed, and where later learning experience comes from; they are not paper-quality rankings.
 
-![RSI autonomy taxonomy overview](./rsi-overview.png)
+<div align="center">
+  <img src="./rsi-overview.png" width="96%" alt="RSI autonomy taxonomy overview: from in-task iteration and execution automation, through strategy search and experience acquisition, to deployment automation and meta-level improvement.">
+  <br>
+  <em><b>Figure 1.</b> RSI autonomy overview: from in-task iteration and execution automation, through strategy search and experience acquisition, to deployment automation and meta-level improvement.</em>
+</div>
 
-*Figure 1. RSI autonomy overview: from in-task iteration and execution automation, through strategy search and experience acquisition, to deployment automation and meta-level improvement.*
+---
+
+<a id="latest-updates"></a>
+
+## Latest Updates <sub><a href="#readme-top">↑ top</a></sub>
+
+This section highlights recent, source-verifiable RSI research and industry developments. It is editorially separate from the 519-paper taxonomy, so a release or technical report is never presented as a peer-reviewed paper by default.
+
+1. **2026-09-10 — Companion survey released:** [*The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement*](https://arxiv.org/abs/2609.11873) introduces HCI and the L1-L5 RSI roadmap used by this repository. [[Paper](https://arxiv.org/abs/2609.11873)]
+   ![](https://img.shields.io/badge/-Research-2563eb) ![](https://img.shields.io/badge/-Survey-7c3aed) ![](https://img.shields.io/badge/-arXiv-b31b1b)
+
+<details>
+<summary><strong>Update policy</strong></summary>
+
+- Include only a primary research source, official organization post, technical report, release note, or maintained project page.
+- Tag each item as `Research` or `Industry`, then with its material type (`Paper`, `Survey`, `Technical Report`, `Official Blog`, `Release`, or `Project`). State its publication date and a neutral, one-sentence explanation of RSI relevance.
+- Link research to an official proceedings page, DOI, or arXiv record; link industry items to the organization's original publication, never to a repost or social-media summary.
+- An update is not automatically an in-scope taxonomy paper. It enters the L1-L5 catalog only after the same paper-level relevance review.
+
+</details>
 
 ## Table of Contents
 
+- [Latest Updates](#latest-updates)
+- [Reading Paths](#reading-paths)
 - [Companion Survey](#companion-survey)
 - [Scope and Relevance Decision](#scope-and-relevance-decision)
 - [RSI Improvement-Loop Anatomy](#rsi-improvement-loop-anatomy)
@@ -26,7 +74,21 @@ RSI is the capability of an intelligent system to transform acquired experience 
 - [Citation](#citation)
 - [Data Provenance and Validation](#data-provenance-and-validation)
 
-## Companion Survey
+<a id="reading-paths"></a>
+
+## Reading Paths <sub><a href="#readme-top">↑ top</a></sub>
+
+The full catalog is designed for reference, but these short routes provide a faster entry point:
+
+| Goal | Suggested route |
+| --- | --- |
+| **Understand the field map** | Start with the [companion survey](https://arxiv.org/abs/2609.11873), then read the [improvement-loop anatomy](#rsi-improvement-loop-anatomy) and the [L1-L5 overview](#taxonomy-at-a-glance). |
+| **Study persistent agent improvement** | Read [Voyager](https://arxiv.org/abs/2305.16291) for reusable skills and automatic curricula, then browse [L3](#3-l3---autonomy-over-future-learning-experience) and [L4](#4-l4---autonomy-in-deployment-and-environmental-adaptation). |
+| **Study recursive meta-improvement** | Read [Darwin Gödel Machine](https://arxiv.org/abs/2505.22954) and [Gödel Agent](https://arxiv.org/abs/2410.04444), then browse [L5](#5-l5---from-environmental-adaptation-to-meta-improvement). |
+
+<a id="companion-survey"></a>
+
+## Companion Survey <sub><a href="#readme-top">↑ top</a></sub>
 
 This collection accompanies [**The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement**](https://arxiv.org/abs/2609.11873), by Yi Duan, Ying Liu, Zirui Tang, Haodong Chen, Jun Zhou, Yumou Liu, Bangrui Xu, Yukai Wu, Sidi Chen, Yuhan Zhou, Haoyu Wang, Xiaoyou Yu, Shaokun Han, Xuzhou Zhu, Le Zhou, Bolin Lu, Wei Zhou, Jiachen Liu, Nuozhou Fang, Jiaxin Tian, Ruoyu Chen, Yuxuan Li, Kai Zuo, Kaiyan Zhang, Jiantao Qiu, Conghui He, Guoliang Li, Bowen Zhou, Zhiyuan Liu, Zhoufutu Wen, Jihua Kang, Xuanhe Zhou, and Fan Wu.
 
@@ -34,7 +96,9 @@ The survey introduces the Headroom-Closed Index (HCI), develops the RSI roadmap 
 
 [Read on arXiv](https://arxiv.org/abs/2609.11873) · [PDF](https://arxiv.org/pdf/2609.11873)
 
-## Scope and Relevance Decision
+<a id="scope-and-relevance-decision"></a>
+
+## Scope and Relevance Decision <sub><a href="#readme-top">↑ top</a></sub>
 
 **The 491 baseline papers and 28 table-derived extensions in this collection are retained as RSI-related under the L1-L5 taxonomy.** The taxonomy intentionally includes bounded forms and precursors:
 
@@ -46,7 +110,9 @@ The survey introduces the Headroom-Closed Index (HCI), develops the RSI roadmap 
 
 Thus, inclusion does not claim that every entry is a fully autonomous or open-ended RSI system. The L1 and L2 labels make their bounded autonomy explicit.
 
-## RSI Improvement-Loop Anatomy
+<a id="rsi-improvement-loop-anatomy"></a>
+
+## RSI Improvement-Loop Anatomy <sub><a href="#readme-top">↑ top</a></sub>
 
 Each entry can be interpreted through the same loop: **experience -> candidate modification -> verifier / acceptance rule -> retained improvement -> successor re-entry**. The relevant components are:
 
@@ -61,7 +127,15 @@ Each entry can be interpreted through the same loop: **experience -> candidate m
 
 This anatomy supplies three tests for every claimed RSI loop: **Where does the loop close? What is updated and inherited? Which decisions remain external?**
 
-## How to Read the Tags
+<div align="center">
+  <img src="./assets/rsi-loop-patterns.png" width="100%" alt="Five RSI loop patterns from L1 improvement-execution autonomy to L5 recursive inheritance autonomy. Human-controlled components are shown with gray dashed frames; the agentic loop expands as more improvement responsibilities are internalized.">
+  <br>
+  <em><b>Figure 2.</b> Loop patterns across L1-L5. The agentic loop expands as AI internalizes more of the improvement process, while human-controlled constraints remain explicit.</em>
+</div>
+
+<a id="how-to-read-the-tags"></a>
+
+## How to Read the Tags <sub><a href="#readme-top">↑ top</a></sub>
 
 Each entry has three colored badges:
 
@@ -73,7 +147,9 @@ Each entry has three colored badges:
 
 Blue, purple, orange, green, and red encode L1 through L5. Target colors distinguish the ten updated-object families. Each paper appears exactly once under its primary level; all available target codes are preserved in the entry.
 
-## Taxonomy at a Glance
+<a id="taxonomy-at-a-glance"></a>
+
+## Taxonomy at a Glance <sub><a href="#readme-top">↑ top</a></sub>
 
 | Level | Papers | Interpretation |
 | --- | ---: | --- |
@@ -99,7 +175,11 @@ Blue, purple, orange, green, and red encode L1 through L5. Target colors disting
 | 10 | Full-system / Co-evolution |
 
 
-## 1. L1 - Autonomy over Improvement Execution
+<a id="paper-catalog"></a>
+
+<a id="1-l1---autonomy-over-improvement-execution"></a>
+
+## 1. L1 - Autonomy over Improvement Execution <sub><a href="#readme-top">↑ top</a></sub>
 
 The system executes a human-defined improvement procedure and retains accepted results for later tasks or rounds. **219 papers.**
 
@@ -1203,7 +1283,9 @@ The following additions are explicitly discussed in Table 3 of the survey, which
    ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Prompt_&_Context-7c3aed)  
    *Taxonomy:* L1. *Updated object(s):* 1.3 Prompt & Context; 3.4 Harness / Workflow.
 
-## 2. L2 - Autonomy over Improvement Strategies
+<a id="2-l2---autonomy-over-improvement-strategies"></a>
+
+## 2. L2 - Autonomy over Improvement Strategies <sub><a href="#readme-top">↑ top</a></sub>
 
 The system chooses how to improve a specified target, while the objective, evaluation criterion, or acceptance rule remains externally specified. **159 papers.**
 
@@ -2007,7 +2089,9 @@ The following additions are explicitly listed in Table 4, which groups represent
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
    *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
 
-## 3. L3 - Autonomy over Future Learning Experience
+<a id="3-l3---autonomy-over-future-learning-experience"></a>
+
+## 3. L3 - Autonomy over Future Learning Experience <sub><a href="#readme-top">↑ top</a></sub>
 
 The learner's evolving state influences the experience, task, or curriculum acquired next. **65 papers.**
 
@@ -2341,7 +2425,9 @@ Table 5 identifies the following learner-conditioned future-experience loop, com
    ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L3. *Updated object(s):* 5.1 Model Weights; 8.2 Task Generator.
 
-## 4. L4 - Autonomy in Deployment and Environmental Adaptation
+<a id="4-l4---autonomy-in-deployment-and-environmental-adaptation"></a>
+
+## 4. L4 - Autonomy in Deployment and Environmental Adaptation <sub><a href="#readme-top">↑ top</a></sub>
 
 Reusable memory, skills, or deployed agent components persistently alter later behavior within a fixed improvement process. **45 papers.**
 
@@ -2575,9 +2661,17 @@ The following additions are explicitly discussed in Table 6 under trajectory dis
    ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_&_Skills-2563eb)  
    *Taxonomy:* L4. *Updated object(s):* 4.4 Skill Library; 2.2 Knowledge Memory.
 
-## 5. L5 - From Environmental Adaptation to Meta-Improvement
+<a id="5-l5---from-environmental-adaptation-to-meta-improvement"></a>
+
+## 5. L5 - From Environmental Adaptation to Meta-Improvement <sub><a href="#readme-top">↑ top</a></sub>
 
 The system improves the mechanism that produces future improvements, including search, evaluation, and research-control policies. **31 papers.**
+
+<div align="center">
+  <img src="./assets/rsi-l4-l5-meta-improvement.png" width="100%" alt="Comparison of L4 environmental adaptation and L5 recursive meta-improvement. L5 revises and validates the improvement process inherited by successor systems under external human mission, safety, evaluation, and acceptance constraints.">
+  <br>
+  <em><b>Figure 3.</b> From L4 adaptation to L5 recursive meta-improvement. L5 concerns accepted revisions to the process that produces future improvements, not merely adaptation within a fixed process.</em>
+</div>
 
 ### Table-derived extensions
 
@@ -2739,7 +2833,9 @@ The following additions are explicitly listed in Table 7 as L5 mechanisms with i
    ![](https://img.shields.io/badge/-Level--L5-be123c) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Evaluator_&_Feedback-a21caf)  
    *Taxonomy:* L5. *Updated object(s):* 7.1 Judge; 4.4 Skill Library.
 
-## Contributing
+<a id="contributing"></a>
+
+## Contributing <sub><a href="#readme-top">↑ top</a></sub>
 
 To add or revise an entry, keep its evidence auditable. Provide a stable identifier and state the loop as **current state -> proposal/acquisition -> feedback/admission -> persistent update -> later-round effect**. If a paper changes several objects, retain all target codes but place it under the highest-level mechanism actually demonstrated.
 
@@ -2750,7 +2846,9 @@ To add or revise an entry, keep its evidence auditable. Provide a stable identif
     *Taxonomy:* L3. *Updated object(s):* 8.1 Experience Data.
 ```
 
-## Citation
+<a id="citation"></a>
+
+## Citation <sub><a href="#readme-top">↑ top</a></sub>
 
 If you find this repository or its taxonomy useful, please cite the companion survey:
 
@@ -2766,7 +2864,9 @@ If you find this repository or its taxonomy useful, please cite the companion su
 }
 ```
 
-## Data Provenance and Validation
+<a id="data-provenance-and-validation"></a>
+
+## Data Provenance and Validation <sub><a href="#readme-top">↑ top</a></sub>
 
 This document combines a 491-paper per-paper taxonomy dataset with 28 additional works selected from the survey's representative Tables 3-7 on 2026-09-11. The baseline dataset records a title, arXiv ID, primary level, boundary classification, detailed rationale, and updated-object code(s) for every paper. The extensions retain the table-derived rationale and are placed using the same target taxonomy. Neither source uniformly provides authors or venue metadata, so those fields are intentionally not inferred.
 
