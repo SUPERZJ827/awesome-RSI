@@ -17,6 +17,7 @@
   <a href="#citation">📝 Cite</a> &nbsp;•&nbsp;
   <a href="#taxonomy-at-a-glance">🧭 Taxonomy</a> &nbsp;•&nbsp;
   <a href="#paper-catalog">📚 Catalog</a> &nbsp;•&nbsp;
+  <a href="#industry-practices">🏭 Industry Cases</a> &nbsp;•&nbsp;
   <a href="#latest-updates">🆕 Updates</a> &nbsp;•&nbsp;
   <a href="#contributing">🤝 Contribute</a>
 </p>
@@ -56,9 +57,33 @@ This section highlights recent, source-verifiable RSI research and industry deve
 
 </details>
 
+<a id="industry-practices"></a>
+
+## Public Industry Practices <sub><a href="#readme-top">↑ top</a></sub>
+
+This timeline records **publicly disclosed cases in which AI systems participate in their organization's AI R&D, training or inference infrastructure, or a retained self-improvement loop**. It is deliberately separate from the paper catalog: each item is linked to a primary organization source and is **not** evidence that the system autonomously trained a successor frontier model. Results below are organization-reported, not independently reproduced.
+
+Entries are ordered by publication date (newest first). “Boundary” names the most important limitation on the RSI claim rather than treating all feedback-driven optimization as equivalent.
+
+| Date | Organization / primary source | Publicly disclosed practice | Reported result and boundary |
+| --- | --- | --- | --- |
+| 2026-09-17 | [Z.ai — *How GLM Built Its Own Inference Infrastructure*](https://z.ai/blog/glm-built-its-inference-infrastructure) | GLM-5.3 proposed and validated optimizations for the production inference infrastructure serving GLM-5.3-Flash, using correctness checks, execution traces, microbenchmarks, and end-to-end measurements. | Production-ready in under two weeks; end-to-end throughput reached about **3×** the initial version. This improves serving infrastructure, not GLM's own weights. |
+| 2026-09-17 | [Anthropic — *Measurements for Understanding the Pace of AI Development Inside Frontier Labs*](https://www.anthropic.com/institute/measuring-pace-of-ai-development) | Anthropic measured Claude's participation across its internal AI-development work. | As of August 2026, Claude was reported to lead about **26%** of measured AI-R&D work and to collaborate on over **90%**; no measured task category was fully autonomous. |
+| 2026-08-28 | [Tencent Hunyuan — *Tencent Releases and Open-Sources Tencent Hy4 Preview*](https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/) | Hy4 preview participated in its own R&D, including training methods, data strategy, evaluation, and low-level operator optimization; it also iterated on inference-system bottlenecks using experimental feedback. | Tencent reports **31.8%** end-to-end inference-throughput improvement. The objectives and acceptance process remain externally defined. |
+| 2026-07-29 | [OpenAI — *How GPT-5.6 Fuses Frontier Intelligence with Frontier Efficiency*](https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/) | GPT-5.6 Sol analyzed production workloads, tested routing and forward-pass changes, rewrote production Triton/Gluon operators, and ran architecture experiments for speculative-decoding models. | OpenAI reports **20%** lower end-to-end serving cost and over **15%** token-generation efficiency improvement for speculative decoding. Neither figure means the base model retrained itself. |
+| 2026-07-16 | [Moonshot AI — *Kimi K3: Open Frontier Intelligence*](https://www.kimi.com/en/blog/kimi-k3) | Early K3 versions performed most of the team's operator-optimization work late in K3 development, including attention-kernel work and a MiniTriton compiler demonstration. | This is model-assisted development of the software stack; the post does not establish a corresponding whole-training speedup or autonomous model development. |
+| 2026-06-23 | [ByteDance Seed — *Seed2.1 Officially Released: Advancing AI Productivity*](https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity) | Through “Seed for Seed,” Seed2.1 entered internal model R&D for evaluation, diagnosis, SFT data, RL-framework optimization, paper reproduction, and experiment validation, with multi-round use of intermediate artifacts and feedback. | Some tasks reportedly run for hours to tens of days. The post does not quantify an independent contribution to the final model or claim end-to-end autonomy. |
+| 2026-06 | [Anthropic — *When AI Builds Itself*](https://www.anthropic.com/institute/recursive-self-improvement) | Claude investigated training-cluster failures, modified training code, ran experiments, and reviewed code in Anthropic's development workflow. | Anthropic reports that over **80%** of merged code was attributable to Claude as of May 2026. Controlled training-code experiments should not be read as whole-frontier-training speedups. |
+| 2026-04-02 | [Meta — *KernelEvolve*](https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/) | Meta's Ranking Engineer Agent autonomously designed, executed, and analyzed model experiments; KernelEvolve retained a search tree while iterating through code generation, compilation, correctness checks, and performance tests for kernels. | Meta reports over **60%** inference-throughput improvement for an Andromeda advertising model on NVIDIA GPUs and over **25%** training-throughput improvement for an advertising model on MTIA. These are not Llama results. |
+| 2026-03-18 | [MiniMax — *M2.7: Early Echoes of Self-Evolution*](https://www.minimax.io/news/minimax-m27-en) | M2.7 participated in RL-team workflows and repeatedly improved its own agent framework, tools, skills, and memory from failed trajectories and evaluation feedback. | MiniMax reports coverage of **30–50%** of selected workflows; one autonomous framework experiment ran for over **100** rounds and improved an internal evaluation by **30%**. These are workflow and internal-evaluation results, not a general base-model gain. |
+| 2025-05-14 | [Google DeepMind — *AlphaEvolve*](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) | AlphaEvolve used Gemini to generate algorithm candidates that were automatically evaluated and evolved; applications included Google infrastructure and a matrix-multiplication kernel used in Gemini training. | DeepMind reports a **23%** speedup for that training kernel, corresponding to roughly **1%** lower overall Gemini-training time. The search-and-verification harness remains a fixed, externally designed system. |
+
+The companion catalog retains research prototypes and papers—such as [Darwin Gödel Machine](https://arxiv.org/abs/2505.22954) and [Hyperagents](https://arxiv.org/abs/2603.19461)—under their primary L1–L5 mechanism rather than presenting them here as deployed industrial practice. This separation preserves a useful distinction: current public evidence most strongly supports human-supervised, verifier-mediated loops around infrastructure, experiments, and agent workflows—not fully autonomous successor-model development.
+
 ## Table of Contents
 
 - [Latest Updates](#latest-updates)
+- [Public Industry Practices](#industry-practices)
 - [Reading Paths](#reading-paths)
 - [Companion Survey](#companion-survey)
 - [Scope and Relevance Decision](#scope-and-relevance-decision)
@@ -159,6 +184,8 @@ Blue, purple, orange, green, and red encode L1 through L5. Target colors disting
 | L4 | 45 | Autonomy in deployment and environmental adaptation. |
 | L5 | 31 | From environmental adaptation to meta-improvement. |
 
+Each level begins with a small set of **featured representative papers**, selected to cover its defining mechanisms and important research landmarks. They are entry points for reading, not quality rankings; the complete catalog remains available in the expandable section below each level.
+
 ### Updated-Object Families
 
 | Code prefix | Family |
@@ -182,6 +209,20 @@ Blue, purple, orange, green, and red encode L1 through L5. Target colors disting
 ## 1. L1 - Autonomy over Improvement Execution <sub><a href="#readme-top">↑ top</a></sub>
 
 The system executes a human-defined improvement procedure and retains accepted results for later tasks or rounds. **219 papers.**
+
+### Featured representative papers
+
+| Paper | Representative mechanism |
+| --- | --- |
+| [STaR](https://arxiv.org/abs/2203.14465) | Bootstraps model-generated rationales into a fixed, correctness-filtered self-training loop. |
+| [Constitutional AI](https://arxiv.org/abs/2212.08073) | Establishes critique-and-revision with AI feedback under a human-specified constitution. |
+| [ReST](https://arxiv.org/abs/2308.08998) | Generates an offline dataset with the current policy, then improves that policy with offline reinforcement learning. |
+| [SPIN](https://arxiv.org/abs/2401.01335) | Generates training data from earlier policy iterations and refines the policy against human-annotated responses. |
+| [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) | Uses model-generated judgments as a fixed-protocol training signal. |
+| [Meta-Rewarding Language Models](https://arxiv.org/abs/2407.19594) | Extends AI-feedback training to iterative refinement of the judging signal. |
+
+<details>
+<summary><strong>Browse the full L1 catalog (219 papers)</strong></summary>
 
 ### Table-derived extensions
 
@@ -1283,11 +1324,28 @@ The following additions are explicitly discussed in Table 3 of the survey, which
    ![](https://img.shields.io/badge/-Level--L1-2563eb) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Prompt_&_Context-7c3aed)  
    *Taxonomy:* L1. *Updated object(s):* 1.3 Prompt & Context; 3.4 Harness / Workflow.
 
+</details>
+
 <a id="2-l2---autonomy-over-improvement-strategies"></a>
 
 ## 2. L2 - Autonomy over Improvement Strategies <sub><a href="#readme-top">↑ top</a></sub>
 
 The system chooses how to improve a specified target, while the objective, evaluation criterion, or acceptance rule remains externally specified. **159 papers.**
+
+### Featured representative papers
+
+| Paper | Representative mechanism |
+| --- | --- |
+| [AutoPrompt](https://arxiv.org/abs/2010.15980) | Uses gradient-guided search to generate discrete prompt tokens for a fixed task. |
+| [Automatic Prompt Engineer](https://arxiv.org/abs/2211.01910) | Uses an LLM to propose prompt instructions and an external evaluator to select them. |
+| [ProTeGi](https://arxiv.org/abs/2305.03495) | Optimizes prompts through textual gradients and beam search. |
+| [EvoPrompt](https://arxiv.org/abs/2309.08532) | Treats prompt optimization as evolutionary search. |
+| [Eureka](https://arxiv.org/abs/2310.12931) | Uses LLM-guided evolutionary optimization over reward code for externally specified RL tasks. |
+| [ADAS](https://arxiv.org/abs/2408.08435) | Proposes, evaluates, and archives improved agentic system designs. |
+| [AFlow](https://arxiv.org/abs/2410.10762) | Searches code-represented agent workflows with execution feedback. |
+
+<details>
+<summary><strong>Browse the full L2 catalog (159 papers)</strong></summary>
 
 ### Table-derived extensions
 
@@ -2089,11 +2147,27 @@ The following additions are explicitly listed in Table 4, which groups represent
    ![](https://img.shields.io/badge/-Level--L2-7c3aed) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--External_Artifact-4f46e5)  
    *Taxonomy:* L2. *Updated object(s):* 9.1 Program Code.
 
+</details>
+
 <a id="3-l3---autonomy-over-future-learning-experience"></a>
 
 ## 3. L3 - Autonomy over Future Learning Experience <sub><a href="#readme-top">↑ top</a></sub>
 
 The learner's evolving state influences the experience, task, or curriculum acquired next. **65 papers.**
+
+### Featured representative papers
+
+| Paper | Representative mechanism |
+| --- | --- |
+| [POET](https://arxiv.org/abs/1901.01753) | Co-evolves environments and solvers to generate an expanding adaptive curriculum. |
+| [Voyager](https://arxiv.org/abs/2305.16291) | Couples automatic curricula with a persistent skill library for open-ended embodied learning. |
+| [EnvGen](https://arxiv.org/abs/2403.12014) | Generates and adapts training environments for embodied agents. |
+| [Absolute Zero](https://arxiv.org/abs/2505.03335) | Lets a single model propose and solve code-grounded tasks, with a code executor verifying both tasks and answers. |
+| [R-Zero](https://arxiv.org/abs/2508.05004) | Co-evolves task proposal and solving to create new learning experience from zero data. |
+| [SIMA 2](https://arxiv.org/abs/2512.04797) | Uses Gemini to generate tasks and rewards so the agent can autonomously learn skills in a new virtual environment. |
+
+<details>
+<summary><strong>Browse the full L3 catalog (65 papers)</strong></summary>
 
 ### Table-derived extension
 
@@ -2425,11 +2499,27 @@ Table 5 identifies the following learner-conditioned future-experience loop, com
    ![](https://img.shields.io/badge/-Level--L3-d97706) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Model-1d4ed8)  
    *Taxonomy:* L3. *Updated object(s):* 5.1 Model Weights; 8.2 Task Generator.
 
+</details>
+
 <a id="4-l4---autonomy-in-deployment-and-environmental-adaptation"></a>
 
 ## 4. L4 - Autonomy in Deployment and Environmental Adaptation <sub><a href="#readme-top">↑ top</a></sub>
 
 Reusable memory, skills, or deployed agent components persistently alter later behavior within a fixed improvement process. **45 papers.**
+
+### Featured representative papers
+
+| Paper | Representative mechanism |
+| --- | --- |
+| [OS-Copilot](https://arxiv.org/abs/2402.07456) | Accumulates skills from prior computer tasks to improve a generalist OS agent. |
+| [Trace2Skill](https://arxiv.org/abs/2603.25158) | Distills trajectory-local lessons into transferable agent skills. |
+| [APEX](https://arxiv.org/abs/2605.21240) | Uses autonomous policy exploration to improve deployed agent behavior. |
+| [Metis](https://arxiv.org/abs/2606.24151) | Bridges textual and code memory for self-evolving agents. |
+| [PRACTICE](https://arxiv.org/abs/2608.30760) | Converts interaction experience into expertise for embodied agents. |
+| [ENPIRE](https://arxiv.org/abs/2606.19980) | Applies agentic self-improvement to robot policies in real-world deployment. |
+
+<details>
+<summary><strong>Browse the full L4 catalog (45 papers)</strong></summary>
 
 ### Table-derived extensions
 
@@ -2661,6 +2751,8 @@ The following additions are explicitly discussed in Table 6 under trajectory dis
    ![](https://img.shields.io/badge/-Level--L4-059669) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Tools_&_Skills-2563eb)  
    *Taxonomy:* L4. *Updated object(s):* 4.4 Skill Library; 2.2 Knowledge Memory.
 
+</details>
+
 <a id="5-l5---from-environmental-adaptation-to-meta-improvement"></a>
 
 ## 5. L5 - From Environmental Adaptation to Meta-Improvement <sub><a href="#readme-top">↑ top</a></sub>
@@ -2672,6 +2764,20 @@ The system improves the mechanism that produces future improvements, including s
   <br>
   <em><b>Figure 3.</b> From L4 adaptation to L5 recursive meta-improvement. L5 concerns accepted revisions to the process that produces future improvements, not merely adaptation within a fixed process.</em>
 </div>
+
+### Featured representative papers
+
+| Paper | Representative mechanism |
+| --- | --- |
+| [Self-Taught Optimizer](https://arxiv.org/abs/2310.02304) | Recursively improves the code-generation procedure that drives later search rounds. |
+| [Gödel Agent](https://arxiv.org/abs/2410.04444) | Provides a self-referential agent framework that can revise its own improvement routines. |
+| [Darwin Gödel Machine](https://arxiv.org/abs/2505.22954) | Evolves coding agents through evaluated code modifications and inherited successful descendants. |
+| [AIRA2](https://arxiv.org/abs/2603.26499) | Targets AI-research-agent bottlenecks through asynchronous experimentation, hidden-consistent evaluation, and interactive ReAct operators. |
+| [MOSS](https://arxiv.org/abs/2605.22794) | Evolves autonomous agents by rewriting source-level system components. |
+| [The Red Queen Gödel Machine](https://arxiv.org/abs/2606.26294) | Co-evolves agents and evaluators, making the improvement criterion part of the meta-level loop. |
+
+<details>
+<summary><strong>Browse the full L5 catalog (31 papers)</strong></summary>
 
 ### Table-derived extensions
 
@@ -2832,6 +2938,8 @@ The following additions are explicitly listed in Table 7 as L5 mechanisms with i
    [[Paper](https://arxiv.org/abs/2607.12790)] · arXiv:2607.12790  
    ![](https://img.shields.io/badge/-Level--L5-be123c) ![](https://img.shields.io/badge/-In_scope--RSI-16a34a) ![](https://img.shields.io/badge/-Target--Evaluator_&_Feedback-a21caf)  
    *Taxonomy:* L5. *Updated object(s):* 7.1 Judge; 4.4 Skill Library.
+
+</details>
 
 <a id="contributing"></a>
 
