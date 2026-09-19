@@ -42,20 +42,20 @@ RSI is the capability of an intelligent system to transform acquired experience 
 
 ## Latest Updates <sub><a href="#readme-top">↑ top</a></sub>
 
-This section highlights recent, source-verifiable RSI research and industry developments. It is editorially separate from the 519-paper taxonomy, so a release or technical report is never presented as a peer-reviewed paper by default.
+This section logs material updates to this repository, including new source-verified research, industry coverage, and curation. It is editorially separate from the 519-paper taxonomy, so a release, project page, or repository update is never presented as a peer-reviewed paper by default.
+
+1. **2026-09-19 — Public Industry Practices added:** A new [source-verified timeline](#industry-practices) records **11** publicly disclosed cases in which AI systems contribute to AI R&D, training or inference infrastructure, or retained self-improvement loops. Each entry distinguishes the reported result from the limits of its RSI claim. [[Browse the timeline](#industry-practices)]
+   ![](https://img.shields.io/badge/-Repository-475569) ![](https://img.shields.io/badge/-Industry-0f766e) ![](https://img.shields.io/badge/-Curation-7c3aed)
 
 1. **2026-09-10 — Companion survey released:** [*The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement*](https://arxiv.org/abs/2609.11873) introduces HCI and the L1-L5 RSI roadmap used by this repository. [[Paper](https://arxiv.org/abs/2609.11873)]
    ![](https://img.shields.io/badge/-Research-2563eb) ![](https://img.shields.io/badge/-Survey-7c3aed) ![](https://img.shields.io/badge/-arXiv-b31b1b)
 
-1. **2026-05 — ForgeTrain project released:** [*ForgeTrain: An LLM Pretraining Framework Built End-to-End by an Autonomous Agent Loop*](https://github.com/OpenBMB/ForgeTrain) reports an autonomous coding-agent loop that built, debugged, and validated a pretraining framework used to complete MiniCPM4-0.5B pretraining. [[Project](https://github.com/OpenBMB/ForgeTrain)]
-   ![](https://img.shields.io/badge/-Industry-0f766e) ![](https://img.shields.io/badge/-Project-4f46e5) ![](https://img.shields.io/badge/-GitHub-24292f?logo=github&logoColor=white)
-
 <details>
 <summary><strong>Update policy</strong></summary>
 
-- Include only a primary research source, official organization post, technical report, release note, or maintained project page.
-- Tag each item as `Research` or `Industry`, then with its material type (`Paper`, `Survey`, `Technical Report`, `Official Blog`, `Release`, or `Project`). State its publication date and a neutral, one-sentence explanation of RSI relevance.
-- Link research to an official proceedings page, DOI, or arXiv record; link industry items to the organization's original publication, never to a repost or social-media summary.
+- Include a repository update only when it adds or materially revises source-verified coverage; sources remain limited to primary research, official organization posts, technical reports, release notes, or maintained project pages.
+- Tag source items as `Research` or `Industry` and state their material type (`Paper`, `Survey`, `Technical Report`, `Official Blog`, `Release`, or `Project`); tag repository-maintenance entries as `Repository` and state the affected coverage. State the update date and a neutral, one-sentence explanation of RSI relevance.
+- Link research to an official proceedings page, DOI, or arXiv record; link industry items to the organization's original publication, never to a repost or social-media summary; link repository updates to the affected section.
 - An update is not automatically an in-scope taxonomy paper. It enters the L1-L5 catalog only after the same paper-level relevance review.
 
 </details>
